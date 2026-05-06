@@ -716,10 +716,50 @@ button {
 /* ─── 10. Hero ────────────────────────────────────────────────────────────── */
 
 .hero {
-  background: linear-gradient(135deg, #D24130 0%, #A0341F 100%);
+  position: relative;
   padding-block: clamp(3rem, 6vw, 5rem);
-  padding-bottom: 0;
-  overflow: hidden;
+  padding-bottom: 3rem; /* Provide padding so form doesn't touch bottom */
+  background: var(--sbihm-black);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-image: url('assets/images/Our-Campus.png');
+  animation: heroSlideShow 24s infinite;
+  z-index: 0;
+}
+
+@keyframes heroSlideShow {
+  0% {
+    background-image: url('assets/images/Our-Campus.png');
+  }
+  50% {
+    background-image: url('assets/images/Our-Campus.png');
+  }
+  50.01% {
+    background-image: url('assets/images/DSC06050-1-scaled.jpg');
+  }
+  100% {
+    background-image: url('assets/images/DSC06050-1-scaled.jpg');
+  }
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.75) 0%, rgba(26, 26, 26, 0.65) 100%);
+  z-index: 1;
 }
 
 .hero__inner {
@@ -730,85 +770,90 @@ button {
   flex-direction: column;
   gap: 3rem;
   align-items: flex-start;
+  position: relative;
+  z-index: 2;
 }
 
 .hero__content {
   flex: 1;
   color: white;
-  max-width: 640px;
+  max-width: 550px;
+  position: relative;
+  z-index: 3;
 }
 
 .hero__pre-headline {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.78rem;
+  font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--sbihm-gold);
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   background: rgba(255,255,255,0.08);
-  padding: 0.35rem 0.75rem;
+  padding: 0.28rem 0.6rem;
   border-radius: 999px;
   border: 1px solid rgba(212,160,23,0.4);
 }
 
 .hero__headline {
   font-family: var(--font-display);
-  font-size: var(--fs-h1);
+  font-size: clamp(1.8rem, 3.5vw + 0.8rem, 3rem);
   font-weight: 800;
   line-height: 1.06;
   color: white;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.85rem;
 }
 
 .hero__sub {
-  font-size: var(--fs-lead);
-  line-height: 1.65;
+  font-size: clamp(0.85rem, 0.3vw + 0.8rem, 0.95rem);
+  line-height: 1.6;
   color: rgba(255,255,255,0.9);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   max-width: 58ch;
 }
 
 .hero__badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 2rem;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
 }
 
 .hero__badge {
-  font-size: 0.78rem;
+  font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   color: white;
   background: rgba(255,255,255,0.15);
   border: 1px solid rgba(255,255,255,0.35);
-  padding: 0.3rem 0.7rem;
+  padding: 0.24rem 0.55rem;
   border-radius: 4px;
 }
 
 .hero__ctas {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
 }
 
 .hero__trust-micro {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  font-size: 0.85rem;
+  gap: 0.75rem;
+  font-size: 0.75rem;
   color: rgba(255,255,255,0.8);
   font-weight: 500;
 }
 
 .hero__visual {
-  width: 100%;
   position: relative;
-  align-self: flex-end;
+  width: min(100%, 380px);
+  z-index: 3;
+  margin-top: 1rem;
 }
 
 .hero__image-wrap {
@@ -883,13 +928,22 @@ button {
 @media (min-width: 768px) {
   .hero__inner {
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: space-between;
     gap: 3rem;
   }
 
-  .hero__visual {
+  .hero__content {
+    padding-top: 0;
+  }
+
+  .hero__visual { 
     width: 45%;
     flex-shrink: 0;
+    margin-top: 0;
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
   }
 
   .hero__image-wrap {
@@ -898,6 +952,16 @@ button {
 
   .hero__rating-card {
     right: -1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Stacked layout on small screens is now the default, but keeping this block in case other mobile tweaks are needed */
+  .hero__content {
+    padding-top: 0.5rem;
+  }
+  .hero__visual {
+    margin-top: 1rem;
   }
 }
 
@@ -918,7 +982,7 @@ button {
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 16px;
+  border-radius: 14px;
   padding: 0;
   overflow: hidden;
   box-shadow:
@@ -927,6 +991,7 @@ button {
   animation: heroFormSlideIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   opacity: 0;
   transform: translateY(20px);
+  max-width: 400px;
 }
 
 @keyframes heroFormSlideIn {
@@ -939,7 +1004,7 @@ button {
 /* Header */
 .hero-form__header {
   background: rgba(255, 255, 255, 0.1);
-  padding: 1.25rem 1.5rem;
+  padding: 1rem 1.2rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
@@ -947,12 +1012,12 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--sbihm-gold-light);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.35rem;
 }
 
 .hero-form__live-dot {
@@ -972,25 +1037,25 @@ button {
 
 .hero-form__title {
   font-family: var(--font-display);
-  font-size: clamp(1.15rem, 1.5vw + 0.5rem, 1.4rem);
+  font-size: clamp(1rem, 1.2vw + 0.5rem, 1.2rem);
   font-weight: 800;
   color: white;
   line-height: 1.15;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.2rem;
 }
 
 .hero-form__subtitle {
-  font-size: 0.82rem;
+  font-size: 0.72rem;
   color: rgba(255, 255, 255, 0.7);
-  line-height: 1.45;
+  line-height: 1.4;
 }
 
 /* Form Body */
 .hero-form__body {
-  padding: 1.25rem 1.5rem 1.5rem;
+  padding: 1rem 1.2rem 1.2rem;
   display: flex;
   flex-direction: column;
-  gap: 0.9rem;
+  gap: 0.7rem;
 }
 
 /* Field Groups */
@@ -1001,7 +1066,7 @@ button {
 }
 
 .hero-form__label {
-  font-size: 0.78rem;
+  font-size: 0.68rem;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.85);
   letter-spacing: 0.02em;
@@ -1036,9 +1101,9 @@ button {
 /* Inputs */
 .hero-form__input {
   width: 100%;
-  padding: 0.7rem 0.85rem 0.7rem 2.6rem;
+  padding: 0.55rem 0.65rem 0.55rem 2.4rem;
   font-family: var(--font-body);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 500;
   color: white;
   background: rgba(255, 255, 255, 0.08);
@@ -1046,7 +1111,7 @@ button {
   border-radius: 8px;
   outline: none;
   transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
-  min-height: 44px;
+  min-height: 38px;
 }
 
 .hero-form__input::placeholder {
@@ -1297,9 +1362,9 @@ button {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.85rem 1.5rem;
+  padding: 0.6rem 1rem;
   font-family: var(--font-body);
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: 700;
   letter-spacing: 0.02em;
   color: var(--sbihm-black);
@@ -1308,7 +1373,7 @@ button {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  min-height: 50px;
+  min-height: 40px;
   position: relative;
   overflow: hidden;
   transition: transform 0.15s, box-shadow 0.2s, background-position 0.4s;
