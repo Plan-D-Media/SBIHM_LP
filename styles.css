@@ -34,7 +34,9 @@
 
 /* ─── 1. Reset & Base ─────────────────────────────────────────────────────── */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -54,20 +56,34 @@ body {
   overflow-x: hidden;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -142,8 +158,13 @@ button {
   line-height: 1.6;
 }
 
-.text-red  { color: var(--sbihm-red); }
-.text-gold { color: var(--sbihm-gold); }
+.text-red {
+  color: var(--sbihm-red);
+}
+
+.text-gold {
+  color: var(--sbihm-gold);
+}
 
 /* ─── 3. Typography ───────────────────────────────────────────────────────── */
 
@@ -201,11 +222,11 @@ button {
 .btn--outline-white {
   background: transparent;
   color: white;
-  border-color: rgba(255,255,255,0.7);
+  border-color: rgba(255, 255, 255, 0.7);
 }
 
 .btn--outline-white:hover {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   border-color: white;
 }
 
@@ -299,7 +320,7 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.85);
   font-weight: 500;
   transition: color 0.15s;
 }
@@ -473,7 +494,7 @@ button {
 .mobile-drawer__backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(26,26,26,0.55);
+  background: rgba(26, 26, 26, 0.55);
   opacity: 0;
   transition: opacity 0.25s;
 }
@@ -571,7 +592,7 @@ button {
   text-orientation: mixed;
   transform: translateY(-50%) rotate(180deg);
   transition: background 0.18s, right 0.15s;
-  box-shadow: -2px 4px 12px rgba(0,0,0,0.2);
+  box-shadow: -2px 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Undo the rotate for the translateY positioning */
@@ -718,7 +739,8 @@ button {
 .hero {
   position: relative;
   padding-block: clamp(3rem, 6vw, 5rem);
-  padding-bottom: 3rem; /* Provide padding so form doesn't touch bottom */
+  padding-bottom: 3rem;
+  /* Provide padding so form doesn't touch bottom */
   background: var(--sbihm-black);
 }
 
@@ -740,12 +762,15 @@ button {
   0% {
     background-image: url('assets/images/Our-Campus.png');
   }
+
   50% {
     background-image: url('assets/images/Our-Campus.png');
   }
+
   50.01% {
     background-image: url('assets/images/DSC06050-1-scaled.jpg');
   }
+
   100% {
     background-image: url('assets/images/DSC06050-1-scaled.jpg');
   }
@@ -792,10 +817,10 @@ button {
   text-transform: uppercase;
   color: var(--sbihm-gold);
   margin-bottom: 0.75rem;
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
   padding: 0.28rem 0.6rem;
   border-radius: 999px;
-  border: 1px solid rgba(212,160,23,0.4);
+  border: 1px solid rgba(212, 160, 23, 0.4);
 }
 
 .hero__headline {
@@ -810,7 +835,7 @@ button {
 .hero__sub {
   font-size: clamp(0.85rem, 0.3vw + 0.8rem, 0.95rem);
   line-height: 1.6;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
   margin-bottom: 1rem;
   max-width: 58ch;
 }
@@ -827,8 +852,8 @@ button {
   font-weight: 700;
   letter-spacing: 0.06em;
   color: white;
-  background: rgba(255,255,255,0.15);
-  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   padding: 0.24rem 0.55rem;
   border-radius: 4px;
 }
@@ -845,7 +870,7 @@ button {
   flex-wrap: wrap;
   gap: 0.75rem;
   font-size: 0.75rem;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.8);
   font-weight: 500;
 }
 
@@ -873,7 +898,7 @@ button {
   aspect-ratio: 4/5;
 
   /* Placeholder gradient while image loads */
-  background: linear-gradient(160deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
 }
 
 .hero__rating-card {
@@ -937,7 +962,7 @@ button {
     padding-top: 0;
   }
 
-  .hero__visual { 
+  .hero__visual {
     width: 45%;
     flex-shrink: 0;
     margin-top: 0;
@@ -956,10 +981,12 @@ button {
 }
 
 @media (max-width: 767px) {
+
   /* Stacked layout on small screens is now the default, but keeping this block in case other mobile tweaks are needed */
   .hero__content {
     padding-top: 0.5rem;
   }
+
   .hero__visual {
     margin-top: 1rem;
   }
@@ -1031,8 +1058,17 @@ button {
 }
 
 @keyframes livePulse {
-  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.5); }
-  50% { opacity: 0.7; box-shadow: 0 0 0 6px rgba(74, 222, 128, 0); }
+
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.5);
+  }
+
+  50% {
+    opacity: 0.7;
+    box-shadow: 0 0 0 6px rgba(74, 222, 128, 0);
+  }
 }
 
 .hero-form__title {
@@ -1255,32 +1291,32 @@ button {
   transition: opacity 0.2s, transform 0.2s;
 }
 
-.hero-form__checkbox:checked ~ .hero-form__checkbox-custom {
+.hero-form__checkbox:checked~.hero-form__checkbox-custom {
   border-color: var(--sbihm-gold);
   background: rgba(212, 160, 23, 0.1);
 }
 
-.hero-form__checkbox:checked ~ .hero-form__checkbox-custom::after {
+.hero-form__checkbox:checked~.hero-form__checkbox-custom::after {
   opacity: 1;
   transform: scale(1);
 }
 
-.hero-form__checkbox:checked ~ span:last-child {
+.hero-form__checkbox:checked~span:last-child {
   color: white;
 }
 
-.hero-form__checkbox:focus-visible ~ .hero-form__checkbox-custom {
+.hero-form__checkbox:focus-visible~.hero-form__checkbox-custom {
   outline: 2px solid var(--sbihm-gold);
   outline-offset: 2px;
 }
 
 /* When the parent label is for a checked checkbox, highlight the whole label */
-.hero-form__checkbox:checked + .hero-form__checkbox-custom {
+.hero-form__checkbox:checked+.hero-form__checkbox-custom {
   border-color: var(--sbihm-gold);
   background: rgba(212, 160, 23, 0.1);
 }
 
-.hero-form__checkbox:checked + .hero-form__checkbox-custom::after {
+.hero-form__checkbox:checked+.hero-form__checkbox-custom::after {
   opacity: 1;
   transform: scale(1);
 }
@@ -1302,12 +1338,12 @@ button {
   border-color: rgba(37, 211, 102, 0.5);
 }
 
-.hero-form__checkbox:checked ~ .hero-form__checkbox-custom--whatsapp {
+.hero-form__checkbox:checked~.hero-form__checkbox-custom--whatsapp {
   border-color: #25D366;
   background: rgba(37, 211, 102, 0.15);
 }
 
-.hero-form__checkbox:checked ~ .hero-form__checkbox-custom--whatsapp::after {
+.hero-form__checkbox:checked~.hero-form__checkbox-custom--whatsapp::after {
   background: #25D366;
 }
 
@@ -1404,7 +1440,7 @@ button {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%);
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
   transform: translateX(-100%);
   transition: transform 0.6s;
 }
@@ -1443,7 +1479,9 @@ button {
 }
 
 @keyframes formSpin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Privacy note */
@@ -1504,6 +1542,7 @@ button {
     transform: translateX(calc(100% + 2rem));
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;
@@ -1515,6 +1554,7 @@ button {
     transform: translateX(0);
     opacity: 1;
   }
+
   to {
     transform: translateX(calc(100% + 2rem));
     opacity: 0;
@@ -1535,8 +1575,13 @@ button {
 }
 
 @keyframes toastIconPop {
-  0% { transform: scale(0); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .success-toast__content {
@@ -1599,8 +1644,13 @@ button {
 }
 
 @keyframes toastProgress {
-  from { transform: scaleX(1); }
-  to { transform: scaleX(0); }
+  from {
+    transform: scaleX(1);
+  }
+
+  to {
+    transform: scaleX(0);
+  }
 }
 
 /* Mobile: full-width at top */
@@ -2108,7 +2158,7 @@ button {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.75);
+  color: rgba(255, 255, 255, 0.75);
   margin-bottom: 0.5rem;
 }
 
@@ -2123,19 +2173,19 @@ button {
 
 .careers-highlight__detail {
   font-size: 0.95rem;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 1rem;
 }
 
 .careers-highlight__divider {
   height: 1px;
-  background: rgba(255,255,255,0.25);
+  background: rgba(255, 255, 255, 0.25);
   margin-block: 1rem;
 }
 
 .careers-highlight__range {
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.7);
+  color: rgba(255, 255, 255, 0.7);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -2150,7 +2200,7 @@ button {
 
 .careers-highlight__median {
   font-size: 0.875rem;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.8);
   margin-bottom: 1.5rem;
 }
 
@@ -2286,7 +2336,7 @@ button {
   font-weight: 700;
   font-size: 0.9rem;
   color: white;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   padding: 0.3rem 0.65rem;
   border-radius: 4px;
   transition: color 0.25s, background 0.25s;
@@ -2860,7 +2910,7 @@ button {
 
 .apply-left__body {
   font-size: var(--fs-lead);
-  color: rgba(255,255,255,0.88);
+  color: rgba(255, 255, 255, 0.88);
   line-height: 1.65;
   margin-bottom: 1.5rem;
   max-width: 46ch;
@@ -2877,7 +2927,7 @@ button {
 .apply-left__trust li {
   font-size: 0.9rem;
   font-weight: 500;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .apply-left__contact {
@@ -3157,7 +3207,7 @@ button {
 
 .site-footer {
   background: var(--sbihm-black);
-  color: rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .site-footer__main {
@@ -3190,7 +3240,7 @@ button {
 .footer-col__tagline {
   font-size: 0.85rem;
   line-height: 1.6;
-  color: rgba(255,255,255,0.65);
+  color: rgba(255, 255, 255, 0.65);
   margin-bottom: 1.25rem;
   max-width: 30ch;
 }
@@ -3204,11 +3254,11 @@ button {
   width: 36px;
   height: 36px;
   border-radius: 6px;
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255,255,255,0.7);
+  color: rgba(255, 255, 255, 0.7);
   transition: background 0.15s, color 0.15s;
 }
 
@@ -3230,7 +3280,7 @@ button {
 
 .footer-links__link {
   font-size: 0.9rem;
-  color: rgba(255,255,255,0.7);
+  color: rgba(255, 255, 255, 0.7);
   transition: color 0.15s;
 }
 
@@ -3250,16 +3300,16 @@ button {
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1.6;
-  color: rgba(255,255,255,0.7);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .footer-address strong {
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
   font-weight: 600;
 }
 
 .footer-address__link {
-  color: rgba(255,255,255,0.75);
+  color: rgba(255, 255, 255, 0.75);
   transition: color 0.15s;
 }
 
@@ -3289,9 +3339,9 @@ button {
   align-items: center;
   gap: 0.75rem;
   padding: 0.6rem 0.75rem;
-  background: rgba(255,255,255,0.06);
+  background: rgba(255, 255, 255, 0.06);
   border-radius: 6px;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-affiliation-badge__abbr {
@@ -3304,25 +3354,25 @@ button {
 
 .footer-affiliation-badge__name {
   font-size: 0.72rem;
-  color: rgba(255,255,255,0.55);
+  color: rgba(255, 255, 255, 0.55);
   line-height: 1.35;
 }
 
 .site-footer__sub {
-  background: rgba(0,0,0,0.35);
+  background: rgba(0, 0, 0, 0.35);
   padding-block: 1rem;
-  border-top: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .site-footer__sub-text {
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255, 255, 255, 0.45);
   text-align: center;
   line-height: 1.6;
 }
 
 .site-footer__sub-link {
-  color: rgba(255,255,255,0.55);
+  color: rgba(255, 255, 255, 0.55);
   transition: color 0.15s;
 }
 
@@ -3361,7 +3411,7 @@ button {
 .modal__backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(26,26,26,0.6);
+  background: rgba(26, 26, 26, 0.6);
   backdrop-filter: blur(4px);
 }
 
@@ -3476,16 +3526,39 @@ button {
 /* ─── 27. Animations & Motion ─────────────────────────────────────────────── */
 
 @keyframes whatsapp-bounce {
-  0%, 100%   { transform: translateY(0); }
-  10%        { transform: translateY(-8px); }
-  20%        { transform: translateY(0); }
-  30%        { transform: translateY(-4px); }
-  40%        { transform: translateY(0); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  10% {
+    transform: translateY(-8px);
+  }
+
+  20% {
+    transform: translateY(0);
+  }
+
+  30% {
+    transform: translateY(-4px);
+  }
+
+  40% {
+    transform: translateY(0);
+  }
 }
 
 @keyframes count-up-reveal {
-  from { opacity: 0; transform: translateY(12px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Respect prefers-reduced-motion */
@@ -3514,6 +3587,7 @@ button {
 /* ─── Misc Body Padding for mobile bottom bar ─────────────────────────────── */
 @media (max-width: 767px) {
   body {
-    padding-bottom: 54px; /* matches mobile-bottom-cta height */
+    padding-bottom: 54px;
+    /* matches mobile-bottom-cta height */
   }
 }
