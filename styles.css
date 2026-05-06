@@ -190,7 +190,11 @@ button {
   font-weight: 600;
   line-height: 1.2;
   border-radius: 6px;
-  transition: background 0.18s ease, color 0.18s ease, transform 0.12s ease, box-shadow 0.18s ease;
+  transition:
+    background 0.18s ease,
+    color 0.18s ease,
+    transform 0.12s ease,
+    box-shadow 0.18s ease;
   cursor: pointer;
   text-align: center;
   min-height: 44px;
@@ -253,9 +257,9 @@ button {
 }
 
 .btn--whatsapp {
-  background: #25D366;
+  background: #25d366;
   color: white;
-  border-color: #25D366;
+  border-color: #25d366;
 }
 
 .btn--whatsapp:hover {
@@ -355,7 +359,9 @@ button {
   z-index: 900;
   background: var(--sbihm-paper);
   border-bottom: 1px solid transparent;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
 }
 
 .site-header.scrolled {
@@ -395,7 +401,9 @@ button {
   font-weight: 500;
   color: var(--sbihm-charcoal);
   border-radius: 4px;
-  transition: color 0.15s, background 0.15s;
+  transition:
+    color 0.15s,
+    background 0.15s;
   white-space: nowrap;
 }
 
@@ -442,7 +450,9 @@ button {
   height: 2px;
   background: var(--sbihm-black);
   border-radius: 2px;
-  transition: transform 0.2s, opacity 0.2s;
+  transition:
+    transform 0.2s,
+    opacity 0.2s;
 }
 
 .hamburger[aria-expanded="true"] .hamburger__bar:nth-child(1) {
@@ -591,7 +601,9 @@ button {
   writing-mode: vertical-rl;
   text-orientation: mixed;
   transform: translateY(-50%) rotate(180deg);
-  transition: background 0.18s, right 0.15s;
+  transition:
+    background 0.18s,
+    right 0.15s;
   box-shadow: -2px 4px 12px rgba(0, 0, 0, 0.2);
 }
 
@@ -671,12 +683,14 @@ button {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: #25D366;
+  background: #25d366;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 16px rgba(37, 211, 102, 0.45);
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
   animation: whatsapp-bounce 5s ease-in-out infinite;
 }
 
@@ -715,7 +729,7 @@ button {
 }
 
 .whatsapp-fab__tooltip::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 100%;
   top: 50%;
@@ -745,7 +759,7 @@ button {
 }
 
 .hero::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -753,37 +767,41 @@ button {
   bottom: 0;
   background-size: cover;
   background-position: center;
-  background-image: url('assets/images/Our-Campus.png');
+  background-image: url("assets/images/Our-Campus.png");
   animation: heroSlideShow 24s infinite;
   z-index: 0;
 }
 
 @keyframes heroSlideShow {
   0% {
-    background-image: url('assets/images/Our-Campus.png');
+    background-image: url("assets/images/Our-Campus.png");
   }
 
   50% {
-    background-image: url('assets/images/Our-Campus.png');
+    background-image: url("assets/images/Our-Campus.png");
   }
 
   50.01% {
-    background-image: url('assets/images/DSC06050-1-scaled.jpg');
+    background-image: url("assets/images/DSC06050-1-scaled.jpg");
   }
 
   100% {
-    background-image: url('assets/images/DSC06050-1-scaled.jpg');
+    background-image: url("assets/images/DSC06050-1-scaled.jpg");
   }
 }
 
 .hero::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(26, 26, 26, 0.75) 0%, rgba(26, 26, 26, 0.65) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(26, 26, 26, 0.75) 0%,
+    rgba(26, 26, 26, 0.65) 100%
+  );
   z-index: 1;
 }
 
@@ -898,7 +916,11 @@ button {
   aspect-ratio: 4/5;
 
   /* Placeholder gradient while image loads */
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  background: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
 }
 
 .hero__rating-card {
@@ -981,7 +1003,6 @@ button {
 }
 
 @media (max-width: 767px) {
-
   /* Stacked layout on small screens is now the default, but keeping this block in case other mobile tweaks are needed */
   .hero__content {
     padding-top: 0.5rem;
@@ -1058,7 +1079,6 @@ button {
 }
 
 @keyframes livePulse {
-
   0%,
   100% {
     opacity: 1;
@@ -1146,7 +1166,10 @@ button {
   border: 1.5px solid rgba(255, 255, 255, 0.18);
   border-radius: 8px;
   outline: none;
-  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+  transition:
+    border-color 0.2s,
+    background 0.2s,
+    box-shadow 0.2s;
   min-height: 38px;
 }
 
@@ -1226,7 +1249,9 @@ button {
   right: 0.85rem;
   color: rgba(255, 255, 255, 0.45);
   pointer-events: none;
-  transition: transform 0.2s, color 0.2s;
+  transition:
+    transform 0.2s,
+    color 0.2s;
 }
 
 .hero-form__input-wrap--select:focus-within .hero-form__select-arrow {
@@ -1261,7 +1286,10 @@ button {
   background: rgba(255, 255, 255, 0.06);
   border: 1.5px solid rgba(255, 255, 255, 0.15);
   border-radius: 8px;
-  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+  transition:
+    border-color 0.2s,
+    background 0.2s,
+    box-shadow 0.2s;
   user-select: none;
 }
 
@@ -1277,46 +1305,50 @@ button {
   border-radius: 4px;
   flex-shrink: 0;
   position: relative;
-  transition: border-color 0.2s, background 0.2s;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
 }
 
 .hero-form__checkbox-custom::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 2px;
   border-radius: 2px;
   background: var(--sbihm-gold);
   opacity: 0;
   transform: scale(0.3);
-  transition: opacity 0.2s, transform 0.2s;
+  transition:
+    opacity 0.2s,
+    transform 0.2s;
 }
 
-.hero-form__checkbox:checked~.hero-form__checkbox-custom {
+.hero-form__checkbox:checked ~ .hero-form__checkbox-custom {
   border-color: var(--sbihm-gold);
   background: rgba(212, 160, 23, 0.1);
 }
 
-.hero-form__checkbox:checked~.hero-form__checkbox-custom::after {
+.hero-form__checkbox:checked ~ .hero-form__checkbox-custom::after {
   opacity: 1;
   transform: scale(1);
 }
 
-.hero-form__checkbox:checked~span:last-child {
+.hero-form__checkbox:checked ~ span:last-child {
   color: white;
 }
 
-.hero-form__checkbox:focus-visible~.hero-form__checkbox-custom {
+.hero-form__checkbox:focus-visible ~ .hero-form__checkbox-custom {
   outline: 2px solid var(--sbihm-gold);
   outline-offset: 2px;
 }
 
 /* When the parent label is for a checked checkbox, highlight the whole label */
-.hero-form__checkbox:checked+.hero-form__checkbox-custom {
+.hero-form__checkbox:checked + .hero-form__checkbox-custom {
   border-color: var(--sbihm-gold);
   background: rgba(212, 160, 23, 0.1);
 }
 
-.hero-form__checkbox:checked+.hero-form__checkbox-custom::after {
+.hero-form__checkbox:checked + .hero-form__checkbox-custom::after {
   opacity: 1;
   transform: scale(1);
 }
@@ -1338,13 +1370,13 @@ button {
   border-color: rgba(37, 211, 102, 0.5);
 }
 
-.hero-form__checkbox:checked~.hero-form__checkbox-custom--whatsapp {
-  border-color: #25D366;
+.hero-form__checkbox:checked ~ .hero-form__checkbox-custom--whatsapp {
+  border-color: #25d366;
   background: rgba(37, 211, 102, 0.15);
 }
 
-.hero-form__checkbox:checked~.hero-form__checkbox-custom--whatsapp::after {
-  background: #25D366;
+.hero-form__checkbox:checked ~ .hero-form__checkbox-custom--whatsapp::after {
+  background: #25d366;
 }
 
 .hero-form__whatsapp-text {
@@ -1369,7 +1401,10 @@ button {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: min-height 0.2s, max-height 0.2s, opacity 0.2s;
+  transition:
+    min-height 0.2s,
+    max-height 0.2s,
+    opacity 0.2s;
 }
 
 .hero-form__error:not(:empty) {
@@ -1404,7 +1439,12 @@ button {
   font-weight: 700;
   letter-spacing: 0.02em;
   color: var(--sbihm-black);
-  background: linear-gradient(135deg, var(--sbihm-gold) 0%, #e8b82e 50%, var(--sbihm-gold-light) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--sbihm-gold) 0%,
+    #e8b82e 50%,
+    var(--sbihm-gold-light) 100%
+  );
   background-size: 200% 200%;
   border: none;
   border-radius: 8px;
@@ -1412,7 +1452,10 @@ button {
   min-height: 40px;
   position: relative;
   overflow: hidden;
-  transition: transform 0.15s, box-shadow 0.2s, background-position 0.4s;
+  transition:
+    transform 0.15s,
+    box-shadow 0.2s,
+    background-position 0.4s;
   box-shadow:
     0 4px 15px rgba(212, 160, 23, 0.35),
     0 1px 3px rgba(0, 0, 0, 0.1);
@@ -1437,10 +1480,15 @@ button {
 }
 
 .hero-form__submit::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
   transform: translateX(-100%);
   transition: transform 0.6s;
 }
@@ -1618,7 +1666,9 @@ button {
   background: none;
   border: none;
   cursor: pointer;
-  transition: background 0.15s, color 0.15s;
+  transition:
+    background 0.15s,
+    color 0.15s;
 }
 
 .success-toast__close:hover {
@@ -1748,7 +1798,9 @@ button {
   border: 1px solid var(--sbihm-line);
   border-radius: 10px;
   padding: 1.5rem;
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
 }
 
 .usp-card:hover {
@@ -1925,7 +1977,7 @@ button {
 }
 
 .curriculum-timeline::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 22px;
   top: 0;
@@ -2066,7 +2118,9 @@ button {
   font-weight: 600;
   padding: 0.35rem 0.85rem;
   border-radius: 999px;
-  transition: background 0.15s, color 0.15s;
+  transition:
+    background 0.15s,
+    color 0.15s;
 }
 
 .skill-pill:hover {
@@ -2100,7 +2154,9 @@ button {
   border: 1px solid var(--sbihm-line);
   border-radius: 10px;
   padding: 1.25rem;
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
 }
 
 .career-card:hover {
@@ -2228,8 +2284,14 @@ button {
 
 .partners-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 0.75rem;
+}
+
+@media (min-width: 480px) {
+  .partners-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .partner-logo {
@@ -2241,10 +2303,13 @@ button {
   align-items: center;
   justify-content: center;
   padding: 0.5rem;
-  transition: box-shadow 0.2s, filter 0.2s;
+  transition:
+    box-shadow 0.2s,
+    filter 0.2s;
   filter: grayscale(100%);
   opacity: 0.75;
   cursor: default;
+  overflow: hidden;
 }
 
 .partner-logo:hover {
@@ -2264,6 +2329,7 @@ button {
 
 .partner-logo img {
   max-height: 56px;
+  max-width: 100%;
   width: auto;
   object-fit: contain;
   filter: grayscale(100%);
@@ -2309,7 +2375,11 @@ button {
   transition: transform 0.4s ease;
 
   /* Placeholder color while images load */
-  background: linear-gradient(135deg, var(--sbihm-red-soft) 0%, var(--sbihm-cream) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--sbihm-red-soft) 0%,
+    var(--sbihm-cream) 100%
+  );
 }
 
 .bento-cell:hover img {
@@ -2337,7 +2407,9 @@ button {
   background: rgba(0, 0, 0, 0.6);
   padding: 0.3rem 0.65rem;
   border-radius: 4px;
-  transition: color 0.25s, background 0.25s;
+  transition:
+    color 0.25s,
+    background 0.25s;
 }
 
 .bento-cell:hover .bento-cell__label {
@@ -2515,7 +2587,10 @@ button {
   align-items: center;
   justify-content: center;
   color: var(--sbihm-charcoal);
-  transition: border-color 0.15s, background 0.15s, color 0.15s;
+  transition:
+    border-color 0.15s,
+    background 0.15s,
+    color 0.15s;
   min-height: 40px;
 }
 
@@ -2542,7 +2617,9 @@ button {
   border: none;
   padding: 0;
   cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
+  transition:
+    background 0.2s,
+    transform 0.2s;
   min-height: 8px;
 }
 
@@ -2708,13 +2785,17 @@ button {
 }
 
 .admission-steps::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 22px;
   top: 46px;
   bottom: 46px;
   width: 2px;
-  background: linear-gradient(to bottom, var(--sbihm-red) 0%, var(--sbihm-gold) 100%);
+  background: linear-gradient(
+    to bottom,
+    var(--sbihm-red) 0%,
+    var(--sbihm-gold) 100%
+  );
 }
 
 .admission-step {
@@ -2823,7 +2904,9 @@ button {
   color: var(--sbihm-black);
   background: var(--sbihm-paper);
   text-align: left;
-  transition: background 0.15s, color 0.15s;
+  transition:
+    background 0.15s,
+    color 0.15s;
   min-height: 56px;
 }
 
@@ -2882,7 +2965,7 @@ button {
 }
 
 .apply-left {
-  background: linear-gradient(135deg, #D24130 0%, #A0341F 100%);
+  background: linear-gradient(135deg, #d24130 0%, #a0341f 100%);
   color: white;
   padding: clamp(2.5rem, 6vw, 5rem) clamp(1rem, 4vw, 3.5rem);
   flex: 1;
@@ -3013,7 +3096,9 @@ button {
   font-size: 0.975rem;
   color: var(--sbihm-black);
   background: var(--sbihm-paper);
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
   min-height: 48px;
   width: 100%;
   -webkit-appearance: none;
@@ -3257,7 +3342,9 @@ button {
   align-items: center;
   justify-content: center;
   color: rgba(255, 255, 255, 0.7);
-  transition: background 0.15s, color 0.15s;
+  transition:
+    background 0.15s,
+    color 0.15s;
 }
 
 .footer-social__link:hover {
@@ -3436,7 +3523,9 @@ button {
   align-items: center;
   justify-content: center;
   color: var(--sbihm-mute);
-  transition: background 0.15s, color 0.15s;
+  transition:
+    background 0.15s,
+    color 0.15s;
 }
 
 .modal__close:hover {
@@ -3491,7 +3580,10 @@ button {
   align-items: center;
   justify-content: center;
   box-shadow: var(--sbihm-shadow);
-  transition: background 0.18s, transform 0.15s, opacity 0.2s;
+  transition:
+    background 0.18s,
+    transform 0.15s,
+    opacity 0.2s;
   opacity: 0;
 }
 
@@ -3524,7 +3616,6 @@ button {
 /* ─── 27. Animations & Motion ─────────────────────────────────────────────── */
 
 @keyframes whatsapp-bounce {
-
   0%,
   100% {
     transform: translateY(0);
