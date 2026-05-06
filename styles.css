@@ -2236,7 +2236,7 @@ button {
   background: var(--sbihm-paper);
   border: 1px solid var(--sbihm-line);
   border-radius: 8px;
-  height: 64px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2262,9 +2262,8 @@ button {
   line-height: 1.2;
 }
 
-/* When actual logo images are added:
 .partner-logo img {
-  max-height: 36px;
+  max-height: 56px;
   width: auto;
   object-fit: contain;
   filter: grayscale(100%);
@@ -2273,7 +2272,6 @@ button {
 .partner-logo:hover img {
   filter: grayscale(0%);
 }
-*/
 
 @media (min-width: 768px) {
   .partners-grid {
