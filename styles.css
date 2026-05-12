@@ -683,11 +683,11 @@ button {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: #25d366;
+  background: var(--sbihm-red);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.45);
+  box-shadow: 0 4px 16px rgba(210, 65, 48, 0.45);
   transition:
     transform 0.2s,
     box-shadow 0.2s;
@@ -696,7 +696,7 @@ button {
 
 .whatsapp-fab:hover {
   transform: scale(1.08);
-  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.55);
+  box-shadow: 0 6px 24px rgba(210, 65, 48, 0.65);
   animation-play-state: paused;
 }
 
@@ -752,9 +752,8 @@ button {
 
 .hero {
   position: relative;
-  padding-block: clamp(3rem, 6vw, 5rem);
-  padding-bottom: 3rem;
-  /* Provide padding so form doesn't touch bottom */
+  padding-block: clamp(2rem, 4vw, 3.5rem);
+  padding-bottom: 2rem;
   background: var(--sbihm-black);
 }
 
@@ -820,7 +819,6 @@ button {
 .hero__content {
   flex: 1;
   color: white;
-  max-width: 550px;
   position: relative;
   z-index: 3;
 }
@@ -894,7 +892,7 @@ button {
 
 .hero__visual {
   position: relative;
-  width: min(100%, 380px);
+  width: min(100%, 480px);
   z-index: 3;
   margin-top: 1rem;
 }
@@ -977,18 +975,25 @@ button {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 3rem;
+    gap: 2rem;
+    max-width: 100%;
+    margin-inline: 0;
+    padding-inline: clamp(1.5rem, 4vw, 3.5rem);
   }
 
   .hero__content {
     padding-top: 0;
+    flex: 0 0 auto;
+    width: 36%;
+    max-width: 440px;
   }
 
   .hero__visual {
-    width: 45%;
+    width: 52%;
+    max-width: 560px;
     flex-shrink: 0;
     margin-top: 0;
-    margin-left: auto;
+    margin-left: 0;
     display: flex;
     justify-content: flex-end;
   }
@@ -1003,7 +1008,6 @@ button {
 }
 
 @media (max-width: 767px) {
-  /* Stacked layout on small screens is now the default, but keeping this block in case other mobile tweaks are needed */
   .hero__content {
     padding-top: 0.5rem;
   }
@@ -1011,11 +1015,34 @@ button {
   .hero__visual {
     margin-top: 1rem;
   }
+
+  .hero-form__body {
+    grid-template-columns: 1fr;
+  }
+
+  #field-phone,
+  #field-campus,
+  .hero-form__group--whatsapp,
+  .hero-form__submit,
+  .hero-form__privacy {
+    grid-column: auto;
+  }
 }
 
 @media (min-width: 1024px) {
+  .hero__inner {
+    gap: 2.5rem;
+    padding-inline: clamp(2rem, 5vw, 5rem);
+  }
+
+  .hero__content {
+    width: 34%;
+    max-width: 460px;
+  }
+
   .hero__visual {
-    width: 42%;
+    width: 52%;
+    max-width: 580px;
   }
 }
 
@@ -1108,10 +1135,20 @@ button {
 
 /* Form Body */
 .hero-form__body {
-  padding: 1rem 1.2rem 1.2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
+  padding: 0.8rem 1.2rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.55rem 0.9rem;
+}
+
+/* Full Name + Email sit side-by-side (auto-placed col 1 and col 2).
+   Everything else spans the full width. */
+#field-phone,
+#field-campus,
+.hero-form__group--whatsapp,
+.hero-form__submit,
+.hero-form__privacy {
+  grid-column: 1 / -1;
 }
 
 /* Field Groups */

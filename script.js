@@ -390,8 +390,6 @@ async function sendEmailNotification(formDataObj, formName) {
     name:   v => v.trim().length >= 2 ? null : 'Please enter your full name.',
     phone:  v => /^[6-9][0-9]{9}$/.test(v.replace(/\s/g, '')) ? null : 'Please enter a valid 10-digit Indian mobile number.',
     email:  v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) ? null : 'Please enter a valid email address.',
-    city:   v => v.trim().length >= 2 ? null : 'Please enter your city.',
-    stream: v => v !== '' ? null : 'Please select your Class 12 stream.',
   };
 
   function validateField(fieldName, value) {
@@ -439,7 +437,7 @@ async function sendEmailNotification(formDataObj, formName) {
     let valid = true;
     const errors = [];
 
-    ['name', 'phone', 'email', 'city', 'stream'].forEach(name => {
+    ['name', 'phone', 'email'].forEach(name => {
       const input = form.querySelector(`[name="${name}"]`);
       if (!input) return;
       const err = validateField(name, input.value);
@@ -506,8 +504,6 @@ async function sendEmailNotification(formDataObj, formName) {
       name:           form.querySelector('[name="name"]').value.trim(),
       phone:          form.querySelector('[name="phone"]').value.trim(),
       email:          form.querySelector('[name="email"]').value.trim(),
-      city:           form.querySelector('[name="city"]').value.trim(),
-      stream:         form.querySelector('[name="stream"]').value,
       campus:         getCampusValue(),
       source:         form.querySelector('[name="source"]').value || 'not_specified',
       whatsapp_optin: form.querySelector('#field-whatsapp-optin')?.checked ?? false,
@@ -560,8 +556,6 @@ async function sendEmailNotification(formDataObj, formName) {
     fullname: v => v.trim().length >= 2 ? null : 'Please enter your full name.',
     email:    v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) ? null : 'Please enter a valid email address.',
     phone:    v => /^[6-9][0-9]{9}$/.test(v.replace(/\s/g, '')) ? null : 'Enter a valid 10-digit mobile number.',
-    city:     v => v !== '' ? null : 'Please select your city.',
-    stream:   v => v !== '' ? null : 'Please select your Class 12 stream.',
   };
 
   /* ── Helpers ── */
@@ -642,8 +636,6 @@ async function sendEmailNotification(formDataObj, formName) {
       { name: 'fullname', group: 'field-fullname' },
       { name: 'email',    group: 'field-email' },
       { name: 'phone',    group: 'field-phone' },
-      { name: 'city',     group: 'field-city' },
-      { name: 'stream',   group: 'field-stream' },
     ];
 
     fieldMap.forEach(({ name, group }) => {
@@ -692,8 +684,6 @@ async function sendEmailNotification(formDataObj, formName) {
       fullname:       form.querySelector('[name="fullname"]').value.trim(),
       email:          form.querySelector('[name="email"]').value.trim(),
       phone:          form.querySelector('[name="phone"]').value.trim(),
-      city:           form.querySelector('[name="city"]').value,
-      stream:         form.querySelector('[name="stream"]').value,
       campus:         getCampusValues().join(', '),
       whatsapp_optin: true,
       course:         'BHM',
