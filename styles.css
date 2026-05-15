@@ -3289,6 +3289,18 @@ button {
   }
 }
 
+/* ─── Footer Banner Image ─────────────────────────────────────────────────── */
+
+.footer-banner {
+  line-height: 0;
+}
+
+.footer-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 /* ─── 23. CTA Banner ──────────────────────────────────────────────────────── */
 
 .cta-banner {
