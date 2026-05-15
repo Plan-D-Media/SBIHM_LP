@@ -526,13 +526,8 @@ async function sendEmailNotification(formDataObj, formName) {
         source: formData.source,
       });
 
-      /* Show thank-you state */
-      if (formWrap) formWrap.setAttribute('hidden', '');
-      if (thankyou) {
-        thankyou.removeAttribute('hidden');
-        if (nameField) nameField.textContent = formData.name.split(' ')[0];
-        thankyou.focus();
-      }
+      /* Redirect to thank-you page */
+      window.location.href = 'thankyou.html';
 
     } catch (err) {
       setButtonLoading(false);
@@ -707,32 +702,8 @@ async function sendEmailNotification(formDataObj, formName) {
         campus: formData.campus,
       });
 
-      /* Show success toast notification */
-      if (successEl) {
-        successEl.removeAttribute('hidden');
-        /* Re-trigger entrance animation */
-        successEl.classList.remove('toast--dismissing');
-        successEl.style.animation = 'none';
-        successEl.offsetHeight; /* force reflow */
-        successEl.style.animation = '';
-
-        /* Re-trigger progress bar */
-        const progressBar = successEl.querySelector('.success-toast__progress');
-        if (progressBar) {
-          progressBar.style.animation = 'none';
-          progressBar.offsetHeight;
-          progressBar.style.animation = '';
-        }
-      }
-
-      /* Reset form for potential re-submission */
-      form.reset();
-      submitBtn.classList.remove('hero-form__submit--loading');
-      submitBtn.disabled = false;
-
-      /* Auto-dismiss after 8 seconds */
-      clearTimeout(window.__toastTimer);
-      window.__toastTimer = setTimeout(() => dismissToast(), 8000);
+      /* Redirect to thank-you page */
+      window.location.href = 'thankyou.html';
 
     } catch (err) {
       submitBtn.classList.remove('hero-form__submit--loading');
